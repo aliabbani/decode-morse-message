@@ -4,13 +4,12 @@ def decode str
         ".---" => "J", "-.-" => "K", ".-.." => "L", "--" => "M", "-." => "N", "---" => "O",  ".--." => "P", "--.-" => "Q", ".-." => "R",
         "..." => "S", "-" => "T", "..-" => "U", "...-" => "V", ".--" => "W", "-..-" => "X", "-.--" => "Y", "--.." => "Z" }
         str_ar = str.split(" ")
-        codes = {'..' => 'A', '...' => 'B', '....' => 'C', '.....' => 'D', '......' => 'E'}
         result = ''
         str_ar.each do |one|
           if one === ' '
             result += ' '
           else
-            result += codes[one]
+            result += morse[one]
           end
         end
         return result
